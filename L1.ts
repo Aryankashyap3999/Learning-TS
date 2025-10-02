@@ -24,5 +24,8 @@
     but typescript given you union of types that gives you laverage to define more than one type
     ex:- var num : string | number = '23';
     num = 10;
+    also you can do 
+    var num: any = 'Aryan';
+    num = 10;
     
 */

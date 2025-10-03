@@ -1,0 +1,39 @@
+class Product1 {
+    name: string;
+    price1: number | undefined;
+    readonly category: string; // can't be modify even from any setter function; only in constructor can be intialised
+
+    constructor(name: string, category: string, price?: number) {
+        this.name = name;
+        this.category = category;
+        this.price1 = price;
+    }
+
+    display(): void {
+        console.log("Product name is", this.name, "Product price is", this.price1);
+    }
+} 
+
+const p3 = new Product1("Iphone", "Mobile", 100000);
+console.log(p3);
+
+class Product2 {
+    public name : string;
+    private price: number | undefined;
+
+    constructor(name: string, price? : number) {
+        this.name = name;
+        this.price = price;
+    }
+
+    setPrice(price : number) {
+        if(price <= 0) return;
+        this.price = price;
+    }
+
+}
+
+const p4 = new Product2("Iphone", 200000);
+p4.setPrice(20);
+
+console.log(p4);
